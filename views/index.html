@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-
 <html>
    <head>
-      <title>File Metadata</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+      <title>File Metadata Microservice</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="/public/style.css" rel="stylesheet" type="text/css">
+      <link href="/public/css/style.css" rel="stylesheet" type="text/css>
+      <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
    </head>
 
    <body>
       <div class="container">
-        <h1>API Project: File Metadata Microservice</h1>
-
-        <h2>Usage:</h2>
-        <p>
-          Please Upload a File ...
-        </p>
-        <div class="view">
-          <h3 id="output"></h3>
-          <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
-            <input id="inputfield" type="file" name="upfile">
-            <input id="button" type="submit" value="Upload">
-          </form>
-        </div>
-      </div>
-      <div class="footer">
-        <p>
-          by 
-          <a href="http://www.freecodecamp.com">freeCodeCamp</a>
-        </p>
-      </div>
+        <div class="well">
+          <h1>File Metadata Microservice &#128193;</h1>
+           <hr>
+           <h2>
+             Upload a single file to view the file size in bytes
+           </h2>
+           <form id="uploadForm" enctype="multipart/form-data" action="/get-file-size" method="post">
+             <div id="dropzone" class="droppable">
+               <div id="preview" class="preview">Drop your file here or click to browse (max 1000KB)</div>
+             </div>
+           <input type="submit" value="Upload" id="uploadButton" class="uploadbutton">
+           </form>
+           </div>
+         <footer>
+           <p>Github Repo <a href="https://github.com/PSClearn01/file-metadata-microservice" target="_blank">
+           <span class="fa fa-github"></span> 
+           </a></p>
+             <p>
+               Built by <a href="http://www.purosurboxeo.com/" target="_blank">PuroSur Boxeo</a> 
+             </p>  
+             </footer>
+      </div> <!-- container -->
+      <script src="/public/js/makeDroppable.js"></script>
+      <script src="/public/js/index.js"></script>
    </body>
-</html>
+</html>   
